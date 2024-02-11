@@ -1,0 +1,49 @@
+body.dark {   
+    background:  #333;
+}
+
+body.dark p{   
+    color:#fff;
+}
+
+.darkModeSwitch{
+    background: #113528;
+    position: relative;
+    cursor: pointer;
+    outline: none;
+    border-radius: 1rem;
+    margin-right: 5%;
+}
+
+.darkModeSwitch span{
+    width:30px;
+    height:15px;
+    line-height:30px;
+    display:block;
+    color:#fff;
+    background: none;
+}
+
+.darkModeSwitch::after{
+    display:block;
+    background: #fff;
+    width: 2rem;
+    height: 2rem;
+    position: absolute;
+    top:0;
+    left:0;
+    right:unset;
+    border-radius: 3rem;
+    transition: all 1s ease;
+    content: "";
+}
+
+.darkModeSwitch.active{
+  background: #fff;
+}
+
+.darkModeSwitch.active::after{
+  left:unset;
+  right:0;
+  background: #333;
+}

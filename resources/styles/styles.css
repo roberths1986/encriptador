@@ -1,0 +1,324 @@
+body {
+    background-color: #F3F5FC;
+    max-width: 90%;
+    margin: 0 auto;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+header {
+    position: relative;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    display: inline-block;
+    background-color: #F3F5FC;
+    border-radius: 50%;
+}
+
+main {
+    height: 95%;
+    display: flex;
+    justify-content: space-between;
+    padding: 2em 0 0 0;
+    box-sizing: border-box;
+}
+
+/*------------------------------------ seccion de ingreso de texto -----------------------------------------*/
+#cuadroDeIngreso {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 60%;
+    height: 95%;
+    vertical-align: top;
+}
+
+#ingresarTexto {
+    margin: 90px auto 0;
+    width: 90%;
+    height: 60%;
+    background-color: #F3F5FC;
+    font-weight: 400;
+    line-height: 150%;
+    font-size: 32px;
+    color: #0A3871;
+    border: none;
+    outline: none;
+    resize: none;
+    text-align: center;
+    border-radius: 32px;
+}
+
+#ingresarTexto::placeholder {
+    color: #0A3871;
+}
+
+#contenedor-botones {
+    width: 90%;
+    margin: 0 auto 30px;
+}
+
+.advertenciaDeIngreso {
+    display: inline-flex;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #495057;
+    opacity: 0.8;   
+}
+
+.advertenciaDeIngreso img {
+    width: 20px;
+    height: 20px;
+}
+
+.advertenciaDeIngreso p {
+    align-self: center;
+    margin-left: 5px;
+}
+
+.botones {
+    display: flex;
+    justify-content: center;
+}
+
+.btn {
+    width: 90%;
+    height: 50px;
+    border-radius: 24px;
+    margin: 0 6px;
+    font-size: 20px;
+    line-height: 19px;
+    border: 1px solid #0A3871;
+}
+
+.btn1 {
+    background: #0A3871;
+    color: #FFFFFF;
+}
+
+.btn2 {
+    background: #D8DFE8;
+    color: #0A3871;
+}
+
+@media (min-width:835px) {
+    /*efectos para altas resoluciones*/
+
+    .btn1:hover {
+        background: #042b5c;
+        scale: 1.05;
+        box-shadow: 15px 15px 32px -8px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+    .btn2:hover {
+        background: #b1c0d4;
+        scale: 1.05;
+        box-shadow: 15px 15px 32px -8px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition: 0.3s;
+    }
+
+}
+
+/*------------------------------------ seccion de encriptado -----------------------------------------*/
+#cuadroDeSalida {
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 36%;
+    height: 100%;
+    background: #FFFFFF;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.15);
+    border-radius: 32px;
+}
+
+/*----------------------- muneco y mensaje cuando no se ha ingresado texto ---------------------------*/
+#muneco {
+    width: 90%;
+}
+
+#aviso {
+    width: 70%;
+    text-align: center;
+    margin-top: 10px;
+}
+
+#aviso h3 {
+    font-weight: bold;
+    font-size: 28px;
+    color: #343A40;
+}
+
+#aviso p {
+    font-size: 18px;
+    color: #495057;
+    margin-top: 15px;
+}
+
+/*---------------------------Seccion encriptada + el boton de copiar---------------------------*/
+.cont-Encriptado {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#textoEncriptado {
+    font-size: 24px;
+    line-height: 150%;
+    color: #495057;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    padding: 25px;
+    box-sizing: border-box;
+    width: 100%;
+    border: none;
+    background: none;
+    resize: none;
+    outline: none;
+    max-height: 85%;
+}
+
+#botonCopiar {
+    background-color: white;
+    color: #0A3871;
+    margin: 5px auto 40px;
+    transition: 0.3s;
+}
+
+@media (min-width:835px) {
+
+    #botonCopiar:hover {
+        background: #D8DFE8;
+        scale: 1.05;
+        box-shadow: 15px 15px 32px -8px rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+    }
+}
+
+.ocultar {
+    display: none;
+}
+
+/*-----------------------------Footer----------------------------------------*/
+footer {
+    font-size: 15px;
+    color: #495057;
+    height: 5%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    bottom: 1em;
+}
+
+/*-----------------------------Estilos para tablets-----------------------------------*/
+@media (max-width: 835px) {
+
+    .body {
+        max-height: none;
+        height: auto;
+    }
+
+    main {
+        flex-direction: column;
+    }
+
+    /* ----------------- seccion de ingreso de texto-----------------------------------*/
+
+    #cuadroDeIngreso {
+        width: 100%;
+        min-height:730px
+    }
+
+    #ingresarTexto {
+        height: 550px;
+        padding: 50px;
+        box-sizing: border-box;
+    }
+
+    /*--------------------------Seccion de encriptado para tablets --------------------------------------*/
+    #cuadroDeSalida {
+        width: 90%;
+        margin: 28px auto;
+        min-height: 10em;
+    }
+
+    #muneco {
+        display: none;
+    }
+
+    #aviso {
+        margin-top: 0;
+    }
+
+    .cont-Encriptado{
+        height: auto;
+    }
+
+    #botonCopiar {
+        max-width: 50%;
+    }
+
+
+    /*---------Botones para tablets--------*/
+    .btn1:active,
+    .btn2:active,
+    #botonCopiar:active {
+        scale: 0.95;
+    }
+
+    /*----------------------------Footer para tablets-----------------------------------------*/
+    footer {
+        /*display: none;*/
+        font-size: 18px;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+/*---------------------------Estilos para celulares-------------------------------------*/
+@media (max-width: 500px) {
+
+    main {
+        padding: 0;
+    }
+
+    #cuadroDeIngreso {
+        min-height: 630px;
+    }
+
+    #ingresarTexto {
+        padding: 0;
+        height: 300px;
+        margin-top: 120px;
+    }
+
+    .botones {
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        margin: 5px auto;
+        padding: 0;
+    }
+
+    #cuadroEncriptador {
+        min-height: 10em;
+    }
+
+    footer {
+        display: none;
+    }
+}

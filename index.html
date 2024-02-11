@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./resources/styles/reset.css">
+    <link rel="stylesheet" href="./resources/styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="./resources/styles/dark_web.css"/>
+    <title>Encriptador</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><img src="./resources/img/Logo.png" alt="Logo"></h1>
+        <button class="darkModeSwitch ms-2" id="switch">
+            <span><i class="fas fa-sun"></i></span>
+            <span><i class="fas fa-moon"></i></span> 
+        </button>
+    </header>
+
+    <main>
+        <section id="cuadroDeIngreso">
+            <!-- En el textarea se usa una funcion con expresion regular para evitar el ingresos de otros caracteres que
+            no sean estrictamente nuemros y letras en minusculas sin ancentos -->
+            <textarea id="ingresarTexto" cols="30" placeholder="Ingrese el texto aqui" pattern="[a-z]{1,15}" 
+                oninput="this.value = this.value.replace(/[^a-z0-9\s]/g,'')"></textarea>
+                
+            <div id="contenedor-botones">
+
+                <div class="advertenciaDeIngreso">
+                    <img src="./resources/img/advertencia.png" alt="Advertencia de signo de exclamación">
+                    <p> Solo números y letras minúsculas
+                        sin acentos</p>
+                </div>
+
+                <div class="botones">
+                    <button id="btn-Encriptar" class="btn btn1">Encriptar</button>
+                    <button id="btn-Desencriptar" class="btn btn2">Desencriptar</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section id="cuadroDeSalida">
+            <img id="muneco" src="./resources/img/Muñeco.png" alt="imagen de muñeco">
+
+            <div id="aviso" >
+                <h3>Ningún mensaje fue encontrado</h3>
+                <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+            </div>
+
+            <div id="contenedor-Encriptado" class="cont-Encriptado ocultar">
+                <textarea name="" id="textoEncriptado"></textarea>
+                <button id="botonCopiar" class="btn">Copiar</button>
+            </div>
+        </section>
+    </main>
+
+    <footer><p>© Desarrollado por Roberth Sanchez - 2024</p></footer>
+
+    <script src="./resources/js/app.js"></script>
+    <script type="text/javascript" src="resources/js/dark_web.js"></script>
+
+</body>
+
+</html>
