@@ -1,5 +1,5 @@
 let btnEncriptar = document.getElementById("btn-Encriptar");
-let btnDesencriptar = document.getElementById("btn-Desencriptar")
+let btnDesencriptar = document.getElementById("btn-Desencriptar");
 let btnCopiar = document.getElementById("botonCopiar")
 
 let muneco = document.getElementById("muneco");

@@ -71,8 +71,7 @@ main {
     display: inline-flex;
     margin-bottom: 15px;
     font-size: 16px;
-    color: #495057;
-    opacity: 0.8;   
+    color: #495057; 
 }
 
 .advertenciaDeIngreso img {
@@ -128,7 +127,6 @@ main {
         cursor: pointer;
         transition: 0.3s;
     }
-
 }
 
 /*------------------------------------ seccion de encriptado -----------------------------------------*/
