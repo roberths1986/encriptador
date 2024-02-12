@@ -9,7 +9,9 @@ let containerEncriptado = document.getElementById("contenedor-Encriptado");
 let ingresarTexto = document.getElementById("ingresarTexto");
 let textoEncriptado = document.getElementById("textoEncriptado");
 
-function formatoPrimeraLetra(event) {
+// este fragemnto de codigo es para poder comntrolar el texto que se ingresa. 
+// Y como los celulares tienen por defecto, iniciar la escritura en mayusculas, pueda escribirse sin tener que quitar primero las mayusculas
+function restriccionIngresoTexto(event) {
     let texto = event.target.value;
     // Convertir la primera letra en minúscula si la primera palabra está en mayúscula
     texto = texto.charAt(0).toLowerCase() + texto.slice(1);
