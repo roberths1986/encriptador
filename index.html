@@ -23,8 +23,8 @@
         <section id="cuadroDeIngreso">
             <!-- En el textarea se usa una funcion con expresion regular para evitar el ingresos de otros caracteres que
             no sean estrictamente nuemros y letras en minusculas sin ancentos -->
-            <textarea id="ingresarTexto" cols="30" placeholder="Ingrese el texto aqui" pattern="" 
-                oninput="this.value = this.value.replace(/[^a-z0-9\s]/g,'')"></textarea>
+            <textarea id="ingresarTexto" cols="30" placeholder="Ingrese el texto aqui" pattern="[a-z]{1,15}" 
+                oninput="formatoPrimeraLetra(event), this.value = this.value.replace(/[^a-z0-9\s]/g,'')"></textarea>
                 
             <div id="contenedor-botones">
 
