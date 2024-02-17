@@ -3,6 +3,8 @@ body {
     max-width: 90%;
     margin: 0 auto;
     height: 100vh;
+    max-height: 722px;
+    min-height: 550px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -25,7 +27,7 @@ header {
 
 main {
     height: 95%;
-    display: flex;
+    display: inline-flex;
     justify-content: space-between;
     padding: 2em 0 0 0;
     box-sizing: border-box;
@@ -54,7 +56,6 @@ main {
     border: none;
     outline: none;
     resize: none;
-    text-align: center;
     border-radius: 32px;
 }
 
@@ -93,7 +94,7 @@ main {
     width: 90%;
     height: 50px;
     border-radius: 24px;
-    margin: 0 6px;
+    margin: 0 3px;
     font-size: 20px;
     line-height: 19px;
     border: 1px solid #0A3871;
@@ -109,7 +110,7 @@ main {
     color: #0A3871;
 }
 
-@media (min-width:835px) {
+@media (min-width:769px) {
     /*efectos para altas resoluciones*/
 
     .btn1:hover {
@@ -131,12 +132,12 @@ main {
 
 /*------------------------------------ seccion de encriptado -----------------------------------------*/
 #cuadroDeSalida {
-    display: inline-flex;
+    height: 90%;
+    display: block;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 36%;
-    height: 100%;
     background: #FFFFFF;
     box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.15);
     border-radius: 32px;
@@ -148,7 +149,6 @@ main {
 }
 
 #aviso {
-    width: 70%;
     text-align: center;
     margin-top: 10px;
 }
@@ -177,8 +177,6 @@ main {
 #textoEncriptado {
     font-size: 24px;
     line-height: 150%;
-    color: #495057;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     padding: 25px;
     box-sizing: border-box;
     width: 100%;
@@ -186,17 +184,17 @@ main {
     background: none;
     resize: none;
     outline: none;
-    max-height: 85%;
+    max-height: 90%;
 }
 
 #botonCopiar {
     background-color: white;
     color: #0A3871;
-    margin: 5px auto 40px;
+    margin: 5px auto;
     transition: 0.3s;
 }
 
-@media (min-width:835px) {
+@media (min-width:769px) {
 
     #botonCopiar:hover {
         background: #D8DFE8;
@@ -237,7 +235,7 @@ footer {
 
     #cuadroDeIngreso {
         width: 100%;
-        min-height:730px
+        min-height:730px;
     }
 
     #ingresarTexto {
@@ -250,7 +248,9 @@ footer {
     #cuadroDeSalida {
         width: 90%;
         margin: 28px auto;
-        min-height: 10em;
+        padding: 20px;
+        min-height: auto;
+        display: inline-table;
     }
 
     #muneco {
@@ -279,10 +279,7 @@ footer {
 
     /*----------------------------Footer para tablets-----------------------------------------*/
     footer {
-        /*display: none;*/
-        font-size: 18px;
-        justify-content: center;
-        align-items: center;
+        display: none;
     }
 }
 
@@ -299,7 +296,7 @@ footer {
 
     #ingresarTexto {
         padding: 0;
-        height: 300px;
+        height: 380px;
         margin-top: 120px;
     }
 
