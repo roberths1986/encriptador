@@ -35,7 +35,14 @@ function mostrarMuneco() {
 
 function encriptadorTexto(texto) {
 
-    let codigo=[["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]] 
+    let codigo=[
+        ["e","enter"],
+        ["i","imes"],
+        ["a","ai"],
+        ["o","ober"],
+        ["u","ufat"]
+    ];
+
     for (let i=0;i<codigo.length;i++) { 
         if(texto.includes(codigo[i][0])) { 
             texto = texto.replaceAll(codigo[i][0], codigo[i][1]) 
@@ -66,7 +73,14 @@ function mostrarTextoEncriptado() {
 
 function desEncriptadorTexto(texto) {
 
-    let codigo=[["e","enter"],["i","imes"],["a","ai"],["o","ober"],["u","ufat"]] 
+    let codigo=[
+        ["e","enter"],
+        ["i","imes"],
+        ["a","ai"],
+        ["o","ober"],
+        ["u","ufat"]
+    ];
+
     for (let i=0;i<codigo.length;i++) { 
         if(texto.includes(codigo[i][1])) { 
             texto = texto.replaceAll(codigo[i][1],codigo[i][0]) 
